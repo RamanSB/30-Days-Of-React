@@ -288,4 +288,55 @@ signIn(
 );
 
 
-// #3
+// #3a
+function rateProduct(productName, rating, userId) {
+    for (let elem of products) {
+        if (elem["name"] === productName) {
+            elem["ratings"].push(
+                {
+                    userId: userId,
+                    rate: rating
+                })
+        }
+    }
+}
+
+rateProduct('Laptop', 5, "Ramandeep");
+for(let elem of products) {
+    console.log(`${elem.name} has ratings: ${JSON.stringify(elem.ratings)}`);
+};
+
+// #3b
+function averageRating(productName) {
+    for (let elem of products) {
+        if (elem.name === productName) {
+            let avg = 0;
+            for (let obj of elem.ratings) {
+                avg += obj["rate"];
+            }
+            avg /= elem.ratings.length;
+            console.log(`Average rating of ${productName}: ${avg}`);
+        }
+    }
+    
+}
+
+averageRating('mobile phone');
+
+// #4
+function likeProduct(productName, userId) {
+    for (let elem of products) {
+        if (elem['name'] === productName) {
+            if (elem.likes.includes(userId)) {
+                elem.likes.splice(elem.likes.indexOf(userId), 1);
+            } else {
+                elem.likes.push(userId);
+            }
+        }
+    }
+}
+
+likeProduct('Laptop', "fg12cy");
+likeProduct('TV', "zuckerberg.");
+likeProduct("Laptop", "rsb1x");
+console.log(`Products: ${JSON.stringify(products)}`);
