@@ -1,0 +1,42 @@
+1) A module is a file ending with a .js file extension (JS file) that contains exports. These exports can then be imported as a module.
+
+2) A package is a directory containing a single module or collection of modules, i.e. the React library is a package.
+
+3) A package is a directory and a module is a file, a package also contains a package.json file.
+
+4) NPM is the node package manager it is a tool that allows us to download and upload packages from / to the npm registry.
+
+5) Webpack is a module bundler. It is primarily used to take JS modules/files with dependencies and generate static assets representing
+those modules.
+
+6) to create a new react project, we can use the node package executors (npx create-react-app react-project-dir-name)
+
+7) when we execute npx create-react-app react-project, within our react-project directory, we have the following subdirectories:
+    - node_modules
+    - public
+    - src 
+
+we also have the following files: 
+- package.json (Contains version information of the project as well as the node module dependencies our project has)
+- README.md (Contains user defined information about the project)
+- yarn-lock.json or package-lock.json (a fixed version of the package.json)
+
+node_modules directory contains several subdirectorires for the dependencies required by our project.
+public directory contains:
+- a favicon.ico (used for the image shown in the browser tab for our app)
+- index.html (the ONLY, single html file in the application where we import our JSX elements in to, via React DOM).
+- robots.txt (used by webscrapers if our website is scrapable.)
+- logo192.png
+- logo512.png (images used in the default page shown when invoking create-react-app)
+
+src directory contains:
+- index.js
+- index.html
+- App.js
+- App.css
+- serviceWorker.js
+- setUpTests.js
+
+8) VSCode
+
+9) Done that.
