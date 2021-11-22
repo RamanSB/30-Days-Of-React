@@ -1,0 +1,21 @@
+1) An arrow function does not use the 'function' keyword. The usage of the keyword 'this' differs from a function and an arrow function.
+In a regular function this refers to the invocating object of the method, however in an arrow function, 'this' refers to the global window.
+
+2) A react component is a function that returns a JSX Element or a class that renders a JSX element.
+
+3) You make a React component functional by creating a function and returning a jsx element.
+
+4) A Pure Javascript function may not have any return value, however a return value is required for functional components as the returned element is what is is rendered.
+
+5) As small as one may need it to be.
+
+6) Yes,
+function btn() {
+    return (<button>a button</button);
+}
+
+7)  const btnComponent = () => <button>Button</button>;
+
+const inputType = "date";
+8) function inputField = () => <input type={inputType}/>
+

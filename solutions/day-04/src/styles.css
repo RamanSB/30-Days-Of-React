@@ -1,0 +1,54 @@
+.input-fields-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.subscribe-container {
+    padding: 24px;
+    background-color: lightblue;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.input-fields {
+    margin: 36px 0 18px 0;
+    padding: 12px 16px 12px 16px;
+    border-radius: 8px;
+    border: none;
+}
+.input-fields:not(:last-child) {
+    margin-right: 12px;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 0px;
+}
+
+.skills-list {
+    list-style-type: none;
+    display: inline-flex;
+    flex-flow: row wrap;
+}
+
+.skills-list > li:not(::first-line) {
+    margin: 16px 0 0 0;
+}
+
+.skills-list > li:not(:last-child) {
+    margin-right: 32px;
+}
+
+.skill-item {
+    padding: 8px;
+    background:aquamarine;
+    white-space: nowrap;
+    border-radius: 8px;
+    color: gray;
+    margin: 0 0 16px 0;
+}
