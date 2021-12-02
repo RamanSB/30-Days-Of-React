@@ -1,0 +1,11 @@
+1) Array usually contain elements of a javascript datatype, i.e. an Array of objects, Numbers, Strings, etc... we want to convert this in to JSX elements 
+prior to rendering and a map allows us to take one of the aforementioned data elements and convert it in to a JSX element.
+
+2) Keys are used by the React library to keep track of what elements have been updated, added or removed from the list. Each list item
+must have a unique key.
+
+3) Destructuring code allows our code to be more clean and provides better readability of our code as well as helping us cleanly
+extract values of interest from complex objects.
+
+4) Yes.
+
