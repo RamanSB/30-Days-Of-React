@@ -1,0 +1,19 @@
+.population-grid {
+    display: grid;
+    padding: 0 20% 0 20%;
+    grid-template-columns: 15% 1fr 15%;
+    gap: 1px 4px;
+    grid-auto-flow: dense;
+}
+
+.population-grid > * {
+    
+}
+
+.population-grid > div {
+    display: inline;
+    justify-self: left;
+    max-height: 20px;
+    align-self: center;
+    border-radius: 4px;
+}
