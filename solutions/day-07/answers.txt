@@ -1,0 +1,59 @@
+1) A pure javascript function, begins with the word function the method name and a set of paranthesis that may declare
+required parameters (optional/default params)...
+
+function anExampleFunction(param1, paramDefault="default") {
+
+}
+
+2) Inheritance is a concept in programming that allows one class (a subclass) to inherit from another (parent) class. In doing so
+non-private properties (functions & fields) are available in the child class. This allows the child class to be based on the parent
+and inherit the derived properties - therefore we can focus on adding additional functionality that may differ between children in the child
+classes. Properties from the parent class can be overriden by the child class i.e. if a method doWork exists in the parent, the child classes
+have the option to override them...
+
+class Parent {
+    doWork() {
+
+    }
+}
+// ChildA is a rocket scientist
+i.e. class ChildA extends Parent {
+
+    doWork() {
+        solvePartialDifferentialEquation();
+    }
+    function solvePartialDifferentialEquation() {
+
+    }
+}
+// ChildB becomes a plumber
+i.e class ChlidB extends Parent {
+    doWork() {
+        fixPlumbing()
+    }
+    function fixPlumbing() {
+
+    }
+}
+
+
+3) A class based React component is a class that extends from the React.Component class.
+
+4) React class based components represent the components using a class which typically involves a constructor which takes props attribute & a render
+method which returns the JSX element tree to display in the UI.
+
+5) 6)  We may use Class based components if we have a Parent element that has several child elements that are localized to the parent. In this case
+we may want to create a Class based component for the Parent & several functional components within the class for the child components. + We may 
+use class based components when we want to implement lifecycle methods that may occur in any of the following stages:
+
+1) Mounting  - Add component to the DOM tree.
+2) Rendering - taking the exact JSX required and converting it in to HTML to add to the DOM tree.
+3) Committing - Ensuring the JSX from the render method is persisted to the actual DOM (Or is it the Vritual DOM here?)
+4) Unmounting - Removing JSX/HTML from VirtualDOM / DOM.
+
+7) Functional (depends on the developer, as per React 16.8.0 - Functional components are used more frqequently)
+
+9) State is a concept in React that allows us to dynamically store and update the data used within a component.
+
+
+
