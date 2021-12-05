@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import "./styles.css";
+import countryData from './static-country-data';
 
 class Header extends React.Component {
 
@@ -48,6 +49,49 @@ class PrerequisiteList extends React.Component {
 }
 
 
+class CountryDisplay extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {"country": "Panama"};
+  }
+
+  shuffleCountry = () => {
+    let keys = Object.keys(countryData);
+    console.log(keys);
+    let idxOfCurrentValue = keys.indexOf(this.state.country);
+    keys.splice(idxOfCurrentValue, 1);
+    console.log(keys);
+    console.log(Math.random() * keys.length);
+    
+    this.setState(prevState => ({
+      ...prevState,
+      country: keys[Math.floor(Math.random() * keys.length)]
+    }));
+  }
+
+  render() {
+      return (
+        <>
+          <div>
+              <div>
+                <img width="250" height="250" style={{"height": "250px", "width": "200px"}} src={countryData[(this.state.country)]}/>
+                <h3>{this.state.country}</h3>
+              </div>
+              <div>
+                <span>Capital:</span>
+                <span>Language:</span>
+                <span>Population:</span>
+                <span>Currency:</span>
+              </div>
+          </div>
+          <button onClick={this.shuffleCountry}>Select Country</button>
+        </>
+      );
+  }
+  
+}
+
 class App extends React.Component {
 
   
@@ -73,14 +117,23 @@ class App extends React.Component {
   };
 
     return (
-      <>
+      this.props.exercise === "one" ?
+      (
+        <>
+          <Header isLight={this.state.isLight}/>
+          <PrerequisiteList techList={["HTML", "CSS", "JavaScript"]} isLight={this.state.isLight}/>
+          <button style={buttonStyle} onClick={this.changeTheme}>Change Background</button>
+        </>
+      ) :
+      (
+       <>
         <Header isLight={this.state.isLight}/>
-        <PrerequisiteList techList={["HTML", "CSS", "JavaScript"]} isLight={this.state.isLight}/>
-        <button style={buttonStyle} onClick={this.changeTheme}>Change Background</button>
-      </>
+        <CountryDisplay/>
+       </>
+      )
     )
   };
 
 }
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<App exercise={"two"}/>, document.getElementById('root'));
