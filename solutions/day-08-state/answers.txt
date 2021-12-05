@@ -1,0 +1,8 @@
+1) My state is in learning mode.
+2) State is a concept in React that keeps track of a Components properties. State can be used to decide what to render within a Component.
+3) Props are properties that are passed from a Parent component to a Child component, when props are passed to a Component a re-render is not triggered, however
+when state is changed via setState a re-render is triggered. State is a way to capture dynamic fields within a Component & re-render when the state
+is changed.
+4) Class components use a state object, which is accessible using this.state. Functional components use the React.useState(initialStateParam) hook.
+5) We declare a state object within the constructor of a component.
+
